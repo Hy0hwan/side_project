@@ -1,5 +1,10 @@
 @import 'tailwindcss';
 
+.pc-padding {
+  padding-left: 16rem;
+  padding-right: 16rem;
+}
+
 /* :root {
   --background: #ffffff;
   --foreground: #171717;

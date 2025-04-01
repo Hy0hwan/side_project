@@ -15,13 +15,15 @@ export default function Header() {
     <header className="sticky top-0 z-50 h-16 bg-white text-black flex items-center px-6 shadow-md">
       <Link href="/">
         {isDesktop && (
-          <Image
-            src={logo}
-            alt="Logo"
-            width={120}
-            height={40}
-            className="object-contain cursor-pointer"
-          />
+          <div className="pc-padding">
+            <Image
+              src={logo}
+              alt="Logo"
+              width={120}
+              height={40}
+              className="object-contain cursor-pointer"
+            />
+          </div>
         )}
         {isTablet && (
           <Image
