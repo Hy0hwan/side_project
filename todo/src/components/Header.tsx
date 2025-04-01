@@ -12,10 +12,10 @@ export default function Header() {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
 
   return (
-    <header className="sticky top-0 z-50 h-16 bg-white text-black flex items-center px-6 shadow-md">
+    <header className="sticky top-0 z-50 h-16 bg-white text-black flex items-center  shadow-md">
       <Link href="/">
         {isDesktop && (
-          <div className="pc-padding">
+          <div className="pc-layout">
             <Image
               src={logo}
               alt="Logo"

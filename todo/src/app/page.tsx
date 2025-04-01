@@ -1,6 +1,7 @@
 // import Image from "next/image";
 'use client';
 
+import TodoList from '@/components/TodoList';
 import useMediaQuery from '@/utils/useMediaQuery';
 
 export default function Home() {
@@ -11,9 +12,9 @@ export default function Home() {
   return (
     <>
       {isDesktop && (
-        <>
-          <div></div>
-        </>
+        <div className="pc-layout">
+          <TodoList />
+        </div>
       )}
       {isTablet && <div>태블릿 사이즈</div>}
       {isMobile && <div>모바일 사이즈</div>}
