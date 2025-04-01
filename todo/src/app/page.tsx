@@ -1,7 +1,6 @@
 // import Image from "next/image";
 'use client';
 
-import Header from '@/components/Header';
 import useMediaQuery from '@/utils/useMediaQuery';
 
 export default function Home() {
@@ -12,9 +11,9 @@ export default function Home() {
   return (
     <>
       {isDesktop && (
-        <div>
-          <Header />
-        </div>
+        <>
+          <div></div>
+        </>
       )}
       {isTablet && <div>태블릿 사이즈</div>}
       {isMobile && <div>모바일 사이즈</div>}
