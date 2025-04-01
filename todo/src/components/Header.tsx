@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import logo from '../../public/images/logo.png';
 import logo_m from '../../public/images/logo_m.png';
 import useMediaQuery from '@/utils/useMediaQuery';
@@ -12,33 +13,35 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 h-16 bg-white text-black flex items-center px-6 shadow-md">
-      {isDesktop && (
-        <Image
-          src={logo}
-          alt="Logo"
-          width={120}
-          height={40}
-          className="object-contain"
-        />
-      )}
-      {isTablet && (
-        <Image
-          src={logo}
-          alt="Logo"
-          width={120}
-          height={40}
-          className="object-contain"
-        />
-      )}
-      {isMobile && (
-        <Image
-          src={logo_m}
-          alt="Logo_m"
-          width={80}
-          height={30}
-          className="object-contain"
-        />
-      )}
+      <Link href="/">
+        {isDesktop && (
+          <Image
+            src={logo}
+            alt="Logo"
+            width={120}
+            height={40}
+            className="object-contain cursor-pointer"
+          />
+        )}
+        {isTablet && (
+          <Image
+            src={logo}
+            alt="Logo"
+            width={120}
+            height={40}
+            className="object-contain cursor-pointer"
+          />
+        )}
+        {isMobile && (
+          <Image
+            src={logo_m}
+            alt="Logo_m"
+            width={80}
+            height={30}
+            className="object-contain cursor-pointer"
+          />
+        )}
+      </Link>
     </header>
   );
 }
